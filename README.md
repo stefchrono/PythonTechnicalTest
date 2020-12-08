@@ -1,9 +1,9 @@
 # Origin Markets Backend Test
 
 ### Notes:
-- '127.0.0.1:8000/register/' to register as a new user
-- '127.0.0.1:8000/api-token-auth/' to retrieve authentication token
-- '127.0.0.1:8000/bonds/' to get and/or post
+- `127.0.0.1:8000/register/` to register as a new user
+- `127.0.0.1:8000/api-token-auth/` to retrieve authentication token
+- `127.0.0.1:8000/bonds/` to get and/or post
 
 Also note, Browsable API available. Auth Token is generated on registration. Session Auth also used for Browsable API.
 Please ensure you install all `requirements.txt` libraries.
