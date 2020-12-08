@@ -1,8 +1,8 @@
 # Origin Markets Backend Test
 
 ### Notes:
-'127.0.0.1:8000/register/' to register as a new user
-'127.0.0.1:8000/bonds/' to get and/or post
+- '127.0.0.1:8000/register/' to register as a new user
+- '127.0.0.1:8000/bonds/' to get and/or post
 
 ### Spec:
 
