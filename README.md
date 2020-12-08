@@ -6,7 +6,7 @@
 - '127.0.0.1:8000/bonds/' to get and/or post
 
 Also note, Browsable API available. Auth Token is generated on registration. Session Auth also used for Browsable API.
-Please ensure you install all requirements.txt libraries.
+Please ensure you install all `requirements.txt` libraries.
 
 ### Spec:
 
