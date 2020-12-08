@@ -1,5 +1,9 @@
 # Origin Markets Backend Test
 
+### Notes:
+'127.0.0.1:8000/register/' to register as a new user
+'127.0.0.1:8000/bonds/' to get and/or post
+
 ### Spec:
 
 We would like you to implement an api to: ingest some data representing bonds, query an external api for some additional data, store the result, and make the resulting data queryable via api.
