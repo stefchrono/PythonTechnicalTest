@@ -12,14 +12,18 @@ class Bond(models.Model):
     currency = models.CharField(max_length=3)
     maturity = models.DateField()
     lei = models.CharField(max_length=50)
-    legal_name = models.CharField(max_length=30, blank=True)
+    legal_name = models.CharField(max_length=50, blank=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
 
     # Customise instance save to source Legal Name
     def save(self, *args, **kwargs):
         lei_url = f"https://leilookup.gleif.org/api/v2/leirecords?lei={self.lei}"
-        response = requests.get(lei_url).json()
-        self.legal_name = response[0]['Entity']['LegalName']['$']
+        response = requests.get(lei_url)
+        if response.status_code == 200:
+            name = response.json()
+            self.legal_name = str(name[0]['Entity']['LegalName']['$'])
+        else:
+            self.legal_name = "Unknown Legal Name"
         super(Bond, self).save(*args, **kwargs)
 
 # Post-Save signal to create Auth Token
