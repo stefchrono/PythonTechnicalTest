@@ -5,7 +5,7 @@
 - '127.0.0.1:8000/api-token-auth/' to retrieve authentication token
 - '127.0.0.1:8000/bonds/' to get and/or post
 
-Also note, Browsable API available.
+Also note, Browsable API available. Auth Token is generated on registration. Session Auth also used for Browsable API.
 
 ### Spec:
 
